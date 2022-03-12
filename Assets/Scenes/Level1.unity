@@ -4446,7 +4446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &853903025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114329,6 +114329,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7225483197082835268, guid: cfc5cdc4a8f686e47b5b9f8d74584dfa,
+        type: 3}
+      propertyPath: playerDeath
+      value: 
+      objectReference: {fileID: 8300000, guid: 31b2284e8ab3f244182080ca7da474b7, type: 3}
     - target: {fileID: 7225483197082835268, guid: cfc5cdc4a8f686e47b5b9f8d74584dfa,
         type: 3}
       propertyPath: _scoreController

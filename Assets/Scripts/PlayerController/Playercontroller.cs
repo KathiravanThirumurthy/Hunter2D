@@ -12,6 +12,7 @@ public class Playercontroller : MonoBehaviour
     private float speed;
     private Rigidbody2D rgdPlayer;
     private Playeranimation _playerAnimation;
+    
     [SerializeField]
     private float _jumpForce;
     // Checking the player is grounded
@@ -21,6 +22,11 @@ public class Playercontroller : MonoBehaviour
     //No. of lives
     [SerializeField]
     private int _lives;
+
+    [SerializeField]
+    private AudioClip keyPickup;
+    [SerializeField]
+    private AudioClip playerDeath;
     void Awake()
     {
         rgdPlayer = GetComponent<Rigidbody2D>();
@@ -80,6 +86,7 @@ public class Playercontroller : MonoBehaviour
     {
          Debug.Log("Score:" + score);
         _scoreController.incrementScore(score);
+        AudioManager.Instance.PlayCollectable(keyPickup);
     }
 
     public void playerDead(bool playerState)
@@ -106,6 +113,7 @@ public class Playercontroller : MonoBehaviour
             _playerAnimation.playerDead(true);
             //UIManager.instance.restartCurrentScene();
             _gameOverController.PlayerDied();
+            AudioManager.Instance.playeDeath(playerDeath);
             Debug.Log("Remaining Lives : " + _lives);
         }
 

@@ -165,7 +165,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreController: {fileID: 0}
+  _gameOverController: {fileID: 0}
   speed: 5
+  keyPickup: {fileID: 8300000, guid: 707ed9e4e72dc5f4da4f6d6e67e3bb7d, type: 3}
   _jumpForce: 10
   _lives: 3
 --- !u!114 &7225483197082835267
