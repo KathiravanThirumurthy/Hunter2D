@@ -86,7 +86,7 @@ public class Playercontroller : MonoBehaviour
     {
          Debug.Log("Score:" + score);
         _scoreController.incrementScore(score);
-        AudioManager.Instance.PlayCollectable(keyPickup);
+         AudioManager.Instance.PlayCollectable(keyPickup);
     }
 
     public void playerDead(bool playerState)

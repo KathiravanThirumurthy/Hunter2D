@@ -15,15 +15,15 @@ public class Gameover : MonoBehaviour
     /// </summary>
     //adding the _btnRestart from the inspector panel
     [SerializeField]
-    private Button _btnRestart;
-    [SerializeField]
     private Button _btnLobby;
+    [SerializeField]
+    private Button _btnQuit;
 
     private void Awake()
     {
         //Click Listener is added to the Reload 
-        _btnRestart.onClick.AddListener(ReloadLevel);
         _btnLobby.onClick.AddListener(LobbyScreen);
+        _btnQuit.onClick.AddListener(QuitGame);
 
     }
     // When player is dead , GameOver object is set to true
@@ -43,10 +43,14 @@ public class Gameover : MonoBehaviour
     {
        // Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(0);
+        //Resetting all unlocked levels
+        PlayerPrefs.DeleteAll();
     }
         public void QuitGame()
     {
         //Quitting the Application i.e Game
         Application.Quit();
     }
+
+    
 }

@@ -20,10 +20,10 @@ public class Scenecontroller : MonoBehaviour
         //Getting the component of the Button GameObject
         _levelButton = GetComponent<Button>();
         // adding listener to the level Buttons
-        _levelButton.onClick.AddListener(onClick);
+        _levelButton.onClick.AddListener(onClickLevel);
     }
     // function to load scene with given string
-    private void onClick()
+    private void onClickLevel()
     {
         SceneManager.LoadScene(levelName);
         Debug.Log(levelName);

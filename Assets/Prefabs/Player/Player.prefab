@@ -167,9 +167,10 @@ MonoBehaviour:
   _scoreController: {fileID: 0}
   _gameOverController: {fileID: 0}
   speed: 5
-  keyPickup: {fileID: 8300000, guid: 707ed9e4e72dc5f4da4f6d6e67e3bb7d, type: 3}
   _jumpForce: 10
   _lives: 3
+  keyPickup: {fileID: 8300000, guid: 707ed9e4e72dc5f4da4f6d6e67e3bb7d, type: 3}
+  playerDeath: {fileID: 8300000, guid: 31b2284e8ab3f244182080ca7da474b7, type: 3}
 --- !u!114 &7225483197082835267
 MonoBehaviour:
   m_ObjectHideFlags: 0

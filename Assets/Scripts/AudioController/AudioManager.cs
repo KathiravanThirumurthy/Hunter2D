@@ -58,6 +58,7 @@ public class AudioManager : MonoBehaviour
     // Play a single clip through the music source.
     public void PlayCollectable(AudioClip clip)
     {
+        Debug.Log("sound");
         CollectableSource.clip = clip;
         CollectableSource.Play();
     }
@@ -79,4 +80,5 @@ public class AudioManager : MonoBehaviour
         deathSource.clip = clip;
         deathSource.Play();
     }
+    
 }

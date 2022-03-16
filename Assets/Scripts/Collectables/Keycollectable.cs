@@ -8,6 +8,8 @@ public class Keycollectable : MonoBehaviour
     private int _score;
     // Intializing the playercontroller
     private Playercontroller _playercontroller;
+    [SerializeField]
+    private GameObject _particles;
     void Awake()
     {
         // for this key collectable score value is assigned as 10
@@ -25,6 +27,7 @@ public class Keycollectable : MonoBehaviour
         {
             // on getting the component calling the pickup key method from PlayerController
             _playercontroller.pickUpKey(_score);
+            Instantiate(_particles, gameObject.transform.position,Quaternion.identity);
             //after collision destroying the collectable item
             Destroy(this.gameObject);
         }
